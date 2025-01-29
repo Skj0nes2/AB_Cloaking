@@ -18,7 +18,7 @@
     <script>
       function cloak() {
         const win = window.open(); // Define win
-        let url = '/src/index.html'; // Replace value with your url. i.e: Either a file or web address
+        let url = window.location.href + '/src/index.html'; // Replace value with your url. i.e: Either a file or web address
         let iframe = win.document.createElement('iframe'); // Create iFrame
 
         // Apply Styles
