@@ -1,25 +1,34 @@
-<html>
+<!-- Cloak redirect file -->
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>AB Cloaking</title>
+    <title>AB Cloaking Example</title>
     <style>
       a {
         cursor: pointer;
       }
     </style>
+    <meta name="description" content="A simple about:blank cloaking example."> <!-- Meta goes on redirect page-->
+    <meta name="keywords" content="about:blank, cloaking, games, html, css, js, web, site">
+    <meta name="author" content="Aric Jones">
+    <meta name="charset" content="UTF-8">
   </head>
   <body>
-    <a onclick="cloak()">Cloak</a>
+    <a onclick="cloak()">Click to Cloak!</a>
     <script>
       function cloak() {
-        let win = window.open();
-        let url = '/Content/index.html';
-        let iframe = win.document.createElement('iframe');
+        const win = window.open(); // Define win
+        let url = '/src/index.html'; // Replace value with your url. i.e: Either a file or web address
+        let iframe = win.document.createElement('iframe'); // Create iFrame
+
+        // Apply Styles
         iframe.style.width = '100%';
         iframe.style.height = '100%';
         iframe.style.border = 'none';
         iframe.src = url;
         win.document.body.style.margin = '0';
-        win.document.body.appendChild(iframe);
+        
+        win.document.body.appendChild(iframe); // Append iFrame to win
       }
     </script>
   </body>
